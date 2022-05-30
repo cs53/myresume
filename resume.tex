@@ -1,0 +1,219 @@
+%-------------------------
+% Resume in Latex
+% Author :  yiyangiliu (https://github.com/yiyangiliu/Resume)
+% Thanks to: Jake Gutierrez (https://github.com/jakegut/resume)
+%            Sourabh Bajaj (https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[T1]{fontenc}
+\fontfamily{Georgia}\selectfont
+\fontseries{m}\selectfont
+% \fontseries{bx}\selectfont
+\usepackage{latexsym}
+\usepackage{microtype}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\renewcommand{\bfseries}{\fontseries{b}\selectfont}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.55in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\raggedright\small\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \normalsize\textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\scriptsize$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=.4in, labelsep=.13in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    {\LARGE \scshape \bfseries Mohamad Tarshishi} \\ \vspace{1pt}
+    Kabelais,Zahle ,Lebanon \\ \vspace{1pt}
+    \small +961 71567063 $|$ \href{mailto:tarshishey@gmail.com}{\underline{tarshishey@gmail.com}} $|$ 
+    % \href{https://linkedin.com/in/yiyangiliu}{\underline{linkedin.com/in/yiyangiliu}} $|$
+    \href{https://github.com/cs53}{\underline{github.com/cs53}} $|$
+    \href{https://mhmad-tarshishi.netlify.app/}{website:\underline{mhmad-tarshishi.netlify}}
+    %  \href{https://simple-seach-jsm.netlify.app/search}{\underline{https://simple-seach-jsm.netlify.app/search}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lebanese University Facility of Science}{Zahle, LB}
+      {BS, Applied Mathmatics}{2021-9-1}
+    % \resumeSubheading
+    %   {Beijing University of Technology}{Beijing, China}
+    %   {BE, Computer Science (with Hons.); GPA: 2.33/4, WAM: 23.3/100, Ranking: 23/233}{Sep. 2016 -- July 2020}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{PROFESSIONAL EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Develop full stack React apps  }{}
+     
+        % 将用户行为自动化地从数据库导入行为中心，提高推荐系统的工作效率。从rocksdb读取事件，转化为用户行为数据，向action center发送RPC请求，并记录日志。使用流式计算source bolt worker加快效率，批处理脚本，docker加快部署。
+        \resumeItem{\textbf{Designing:} using html,Handlebars and jsx with tailwind CSS, able to develop simple react apps with VS Code  }
+        % 使用流式计算将用户在客户端的行为行为产生的日志，通过字符串解析，转化为各种事件。将事件字符串转化为结构体后存入数据库，产生天级用户事件数据库。使用引入外部配置。使用脚本控制二进制文件，自动化建库流程
+        \resumeItem{\textbf{API's:} Automatically fetching data from API'S and usig Rapid API and running in React apps.}
+        % 为算法工程师提供切换模型的对照工具，使得能端到端地检查不同模型打开时对推荐系统喂出流的效果。将模型的平均交付时间缩短了百分之十
+        % \resumeItem{\textbf{A/B Test Toolkit:} Provided control tool for machine learning engineers to check different models' end-to-end effect on our recommender system's feed service. Reduced 23.3\% of average delivery time of deep-learning models.}
+        % 改造服务部署脚本，将字典、用户数据库等文件从阿里云迁移到自有的HDFS，每月节省了三千美金。编写单元测试、系统测试、端到端测试代码，保证代码质量。
+        \resumeItem{\textbf{Testing\& Deploying :} testing code efficiently and deploying  to multiple webhosting servers like netlify and heroku ,ensuring code is functioning correctly}
+         \resumeItem{\textbf{Pentesting} using basic penetration tools like sqlmap and burpsite able to test for common injection parameters}
+
+    % \resumeSubheading
+    % %   {FinTech Startup \& Tsinghua University}{Beijing, China}
+    % %   {Machine Learning Engineer Intern}{Nov. 2019 -- June 2020}
+    % %   \resumeItemListStart
+    %     % 使用Tensorflow & Kears，在多台显卡上训练多个深度学习模型。使用交叉验证，伪标签，模型融合等方式调优。
+    %     \resumeItem{\textbf{Sentiment Analysis}: Used Tensorflow \& Keras training multiple depth-learning models on multiple GPUs, fine-tuning with multiple techniques such as pseudo-label, cross-verification and model fusion.}
+    %     % 对照BERT论文，复现了提出的深度学习模型。包含所有组件，比如多头自注意力机制，转换器，嵌入层，全连接层，并将代码开源到GitHub。
+    %     \resumeItem{\textbf{Paper Implementation (\href{https://github.com/yiyangiliu/BERT_Paper_Implementation}{\underline{GitHub}}):} Implemented BERT model based on its paper, containing all components, such as multi-head self attention mechanism, transformer, embedding layer.}
+    %     % 利用Requests, Beautifulsoup, Selenium 编写了网络爬虫程序，收集带有数百万条记录的24G财经新闻语料库。使用Pandas用于清理数据，用于未来的特征工程。
+    %     \resumeItem{\textbf{Financial News Dataset:} Wrote web crawler to make 23.3G financial news corpus dataset with millions of records by using Requests, Beautifulsoup, Selenium. Used pandas for cleaning data.}
+    %     % 复现了kaggle房价预测比赛的最好解法，评估了多种机器学习方法的性能，如XGBoost, random forest, tf-id。
+    %     \resumeItem{\textbf{Kaggle Model Evaluation (\href{https://github.com/yiyangiliu/blog/blob/master/contents/kaggle-house-price-forecasting-competition-advanced.md}{\underline{GitHub}}):} Implemented best solution of kaggle house-prices forecasting competition and evaluated various machine learning methods' performance, such as XGBoost, random forest, tf-idf.}
+    %     % 提交了多个合并，给Bert4Keras：一个著名的3.4k开源框架，提供训练、微调、预测最新的深度学习语言模型的接口。
+    %     \resumeItem{\textbf{Bert4Keras (\href{https://github.com/bojone/bert4keras}{\underline{GitHub}}):} Submitted several merge requests to Bert4Keras, a prestigious 3.4k stars open source framework for training, fine-tuning deep-learning language models.}
+    % \resumeItemListEnd
+
+    \resumeSubheading
+      {LOST NGO}{LB}
+      {Remote Consultant}{}
+      \resumeItemListStart
+        % 模拟比特币系统实现所有关键组件，如区块挖掘、工作证明、钱包、公钥和私钥对、货币交易。
+        
+        % 调研了主流的比特币交易系统，写出了运行的全部流程，包括区块的挖掘，产生，证明，传播，交易等
+        \resumeItem{\textbf{Security Report:} Investigated severe sql injection , bypasses admin panel .}
+      \resumeItemListEnd
+    
+%     \resumeSubheading
+%       {Ritatsu Software Tokyo}{Tokyo, Japan}
+%       {Software Engineer Intern}{Aug. 2019 -- Sep. 2019}
+%       \resumeItemListStart
+%         % 设计和编写单元测试、模块测试、系统测试、端到端测试。保证向如野村证券等著名金融机构交付代码的健壮性。
+%         \resumeItem{\textbf{Quality Assurance:} Designed and wrote unittests, function tests, end-to-end tests to guarantee the robustness of code delivered to some prestigious financial institutions like Nomura Securities.}
+%       \resumeItemListEnd
+
+%   \resumeSubHeadingListEnd
+
+
+% %-----------PROJECTS-----------
+% \section{SELECTED PROJECTS}
+%     \resumeSubHeadingListStart
+%       \resumeProjectHeading
+%         % 使用接口将数据可视化，并上传到仓库，提高了个人的线上可见性
+%         {\textbf{RescueTime-Visualization (\href{https://github.com/yiyangiliu/RescueTime-Record}{\underline{Demo}}, \href{https://github.com/yiyangiliu/RescueTime-Visualization}{\underline{GitHub}}):} Visualize RescueTime data and update it to GitHub to increase visibility.}{}
+%       \resumeProjectHeading
+%         % 使用深度学习模型识别视频中出现的物体，提高广告准确性
+%         {\textbf{Deep Learing Based Advertising System (\href{https://github.com/yiyangiliu/KeystoneProject}{\underline{GitHub}}):} Use DL model to identify objects in video to increase Ad accuracy.}{}
+%     \resumeSubHeadingListEnd
+
+%
+%-----------SKILLS-----------
+\section{SELECTED SKILLS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Languages:} Golang, Python, C\small{++}, Shell,JAVA ,Node.js,express,MATLAB,C,Prolog,Assembly,LaTex}{}
+      \resumeProjectHeading
+          {\textbf{Developer Tools:} GitHub , Cloud Platform, Heroku web host, Firebase ,Jupyter Notebook.MacOS terminal,Windows CLI,Linux terminal }{}
+       \resumeProjectHeading
+          {\textbf{Databases:} SQL,MongoDB, }{}
+    \resumeSubHeadingListEnd
+
+%
+%-------------------------------------------
+\end{document}
