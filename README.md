@@ -1,2 +1,2 @@
 my resume implemenetd in latex and online latex editor overleaf.com
-you can edit the source code as you want 
+you can fork and edit the source code
